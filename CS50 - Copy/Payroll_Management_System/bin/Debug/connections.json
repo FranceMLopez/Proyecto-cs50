@@ -1,0 +1,14 @@
+[
+  {
+    "default": true,
+    "type": "MySql",
+    "connection_string": "Server=localhost;Database=jenga_payroll;Uid=root;Pwd=;SslMode=none;",
+    "name": "MySql Connection"
+  },
+  {
+    "default": false,
+    "type": "MySql",
+    "connection_string": "Server=localhost;Database=hrnexusdb;Uid=root;Pwd=;SslMode=none;",
+    "name": "MySql Connection"
+  }
+]

@@ -1,0 +1,996 @@
+{
+  "entities": [
+    {
+      "checked": false,
+      "type": "\\",
+      "table_view": true,
+      "export_csv": true,
+      "print": true,
+      "search": true,
+      "create_update": "\\Forms",
+      "delete": true,
+      "properties": [
+        {
+          "name": "CompanyID",
+          "checked": false,
+          "table": false,
+          "type": "int",
+          "validation": {
+            "name": "None",
+            "regex": "",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": true,
+          "auto_increment": true,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        },
+        {
+          "name": "CompanyName",
+          "checked": true,
+          "table": true,
+          "type": "string",
+          "validation": {
+            "name": "Not Empty",
+            "regex": "(.|\\s)*\\S(.|\\s)*",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": true,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        },
+        {
+          "name": "Logo",
+          "checked": true,
+          "table": true,
+          "type": "byte[]",
+          "validation": {
+            "name": "None",
+            "regex": "",
+            "custom": false
+          },
+          "optional": true,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [
+            "[JengaImage]150,150"
+          ],
+          "reference": null
+        },
+        {
+          "name": "Phone",
+          "checked": true,
+          "table": true,
+          "type": "string",
+          "validation": {
+            "name": "Phone",
+            "regex": "^\\s*(?:\\+?(\\d{1,3}))?[-. (]*(\\d{3})[-. )]*(\\d{3})[-. ]*(\\d{4})(?: *x(\\d+))?\\s*$",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        },
+        {
+          "name": "Email",
+          "checked": true,
+          "table": true,
+          "type": "string",
+          "validation": {
+            "name": "Email",
+            "regex": "(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        },
+        {
+          "name": "Address",
+          "checked": true,
+          "table": true,
+          "type": "string",
+          "validation": {
+            "name": "None",
+            "regex": "",
+            "custom": false
+          },
+          "optional": true,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [
+            "[JengaTextArea]"
+          ],
+          "reference": null
+        }
+      ],
+      "name": "Company",
+      "FileName": "D:\\repos\\Payroll_Management_System\\Payroll_Management_System\\Models\\Company.cs",
+      "namespace": "Payroll_Management_System.Models"
+    },
+    {
+      "checked": true,
+      "type": "\\Pages",
+      "table_view": true,
+      "export_csv": true,
+      "print": true,
+      "search": true,
+      "create_update": "\\Forms",
+      "delete": true,
+      "properties": [
+        {
+          "name": "DeductionID",
+          "checked": false,
+          "table": false,
+          "type": "int",
+          "validation": {
+            "name": "None",
+            "regex": "",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": true,
+          "auto_increment": true,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        },
+        {
+          "name": "EmployeeID",
+          "checked": true,
+          "table": true,
+          "type": "int",
+          "validation": {
+            "name": "None",
+            "regex": "",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": "Employee",
+          "method": "GetEmployeeName",
+          "attributes": [],
+          "reference": "Employee"
+        },
+        {
+          "name": "Name",
+          "checked": true,
+          "table": true,
+          "type": "string",
+          "validation": {
+            "name": "Not Empty",
+            "regex": "(.|\\s)*\\S(.|\\s)*",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": true,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        },
+        {
+          "name": "Amount",
+          "checked": true,
+          "table": true,
+          "type": "double",
+          "validation": {
+            "name": "Decimal",
+            "regex": "^[0-9]*(\\.[0-9]{1,4})?$",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        }
+      ],
+      "name": "Deduction",
+      "FileName": "D:\\repos\\Payroll_Management_System\\Payroll_Management_System\\Models\\Deduction.cs",
+      "namespace": "Payroll_Management_System.Models"
+    },
+    {
+      "checked": true,
+      "type": "\\Pages",
+      "table_view": true,
+      "export_csv": true,
+      "print": true,
+      "search": true,
+      "create_update": "\\Forms",
+      "delete": true,
+      "properties": [
+        {
+          "name": "AllowanceID",
+          "checked": false,
+          "table": false,
+          "type": "int",
+          "validation": {
+            "name": "None",
+            "regex": "",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": true,
+          "auto_increment": true,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        },
+        {
+          "name": "EmployeeID",
+          "checked": true,
+          "table": true,
+          "type": "int",
+          "validation": {
+            "name": "None",
+            "regex": "",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": "Employee",
+          "method": "GetEmployeeName",
+          "attributes": [],
+          "reference": "Employee"
+        },
+        {
+          "name": "Name",
+          "checked": true,
+          "table": true,
+          "type": "string",
+          "validation": {
+            "name": "Not Empty",
+            "regex": "(.|\\s)*\\S(.|\\s)*",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": true,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        },
+        {
+          "name": "Amount",
+          "checked": true,
+          "table": true,
+          "type": "double",
+          "validation": {
+            "name": "Decimal",
+            "regex": "^[0-9]*(\\.[0-9]{1,4})?$",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        }
+      ],
+      "name": "Allowance",
+      "FileName": "D:\\repos\\Payroll_Management_System\\Payroll_Management_System\\Models\\Allowance.cs",
+      "namespace": "Payroll_Management_System.Models"
+    },
+    {
+      "checked": true,
+      "type": "\\Pages",
+      "table_view": true,
+      "export_csv": true,
+      "print": true,
+      "search": true,
+      "create_update": "\\Forms",
+      "delete": true,
+      "properties": [
+        {
+          "name": "DepartmentID",
+          "checked": false,
+          "table": false,
+          "type": "int",
+          "validation": {
+            "name": "None",
+            "regex": "",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": true,
+          "auto_increment": true,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        },
+        {
+          "name": "Name",
+          "checked": true,
+          "table": true,
+          "type": "string",
+          "validation": {
+            "name": "Not Empty",
+            "regex": "(.|\\s)*\\S(.|\\s)*",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": true,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        }
+      ],
+      "name": "Department",
+      "FileName": "D:\\repos\\Payroll_Management_System\\Payroll_Management_System\\Models\\Department.cs",
+      "namespace": "Payroll_Management_System.Models"
+    },
+    {
+      "checked": true,
+      "type": "\\Pages",
+      "table_view": true,
+      "export_csv": true,
+      "print": true,
+      "search": true,
+      "create_update": "\\Forms",
+      "delete": true,
+      "properties": [
+        {
+          "name": "EmployeeID",
+          "checked": false,
+          "table": false,
+          "type": "int",
+          "validation": {
+            "name": "None",
+            "regex": "",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": true,
+          "auto_increment": true,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        },
+        {
+          "name": "Photo",
+          "checked": true,
+          "table": false,
+          "type": "byte[]",
+          "validation": {
+            "name": "None",
+            "regex": "",
+            "custom": false
+          },
+          "optional": true,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [
+            "[JengaImage]150,150"
+          ],
+          "reference": null
+        },
+        {
+          "name": "FullName",
+          "checked": true,
+          "table": true,
+          "type": "string",
+          "validation": {
+            "name": "Name",
+            "regex": "^[a-z ,.'-]+$",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": true,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        },
+        {
+          "name": "Gender",
+          "checked": true,
+          "table": true,
+          "type": "string",
+          "validation": {
+            "name": "None",
+            "regex": "",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [
+            "[JengaOptions]Male,Female,Other"
+          ],
+          "reference": null
+        },
+        {
+          "name": "MaritalStatus",
+          "checked": true,
+          "table": false,
+          "type": "string",
+          "validation": {
+            "name": "None",
+            "regex": "",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [
+            "[JengaOptions]Single,Married,Divorced,Widow,Widower"
+          ],
+          "reference": null
+        },
+        {
+          "name": "BirthDate",
+          "checked": true,
+          "table": false,
+          "type": "DateTime",
+          "validation": {
+            "name": "None",
+            "regex": "",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        },
+        {
+          "name": "Phone",
+          "checked": true,
+          "table": false,
+          "type": "string",
+          "validation": {
+            "name": "Phone",
+            "regex": "^\\s*(?:\\+?(\\d{1,3}))?[-. (]*(\\d{3})[-. )]*(\\d{3})[-. ]*(\\d{4})(?: *x(\\d+))?\\s*$",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        },
+        {
+          "name": "Email",
+          "checked": true,
+          "table": false,
+          "type": "string",
+          "validation": {
+            "name": "Email",
+            "regex": "(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        },
+        {
+          "name": "Address",
+          "checked": true,
+          "table": false,
+          "type": "string",
+          "validation": {
+            "name": "None",
+            "regex": "",
+            "custom": false
+          },
+          "optional": true,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [
+            "[JengaTextArea]"
+          ],
+          "reference": null
+        },
+        {
+          "name": "KinName",
+          "checked": true,
+          "table": false,
+          "type": "string",
+          "validation": {
+            "name": "Name",
+            "regex": "^[a-z ,.'-]+$",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        },
+        {
+          "name": "KinPhone",
+          "checked": true,
+          "table": false,
+          "type": "string",
+          "validation": {
+            "name": "Phone",
+            "regex": "^\\s*(?:\\+?(\\d{1,3}))?[-. (]*(\\d{3})[-. )]*(\\d{3})[-. ]*(\\d{4})(?: *x(\\d+))?\\s*$",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        },
+        {
+          "name": "JoinDate",
+          "checked": true,
+          "table": true,
+          "type": "DateTime",
+          "validation": {
+            "name": "None",
+            "regex": "",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        },
+        {
+          "name": "EmploymentStatus",
+          "checked": true,
+          "table": true,
+          "type": "string",
+          "validation": {
+            "name": "None",
+            "regex": "",
+            "custom": false
+          },
+          "optional": false,
+          "filter": true,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": "Status",
+          "method": "GetStatus",
+          "attributes": [
+            "[JengaOptions]Active,Deceased,Laid-off,Fired,Quit,Retired"
+          ],
+          "reference": null
+        },
+        {
+          "name": "DepartmentID",
+          "checked": true,
+          "table": true,
+          "type": "int",
+          "validation": {
+            "name": "None",
+            "regex": "",
+            "custom": false
+          },
+          "optional": false,
+          "filter": true,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": "Department",
+          "method": "GetDepartmentName",
+          "attributes": [],
+          "reference": "Department"
+        },
+        {
+          "name": "Designation",
+          "checked": true,
+          "table": true,
+          "type": "string",
+          "validation": {
+            "name": "Not Empty",
+            "regex": "(.|\\s)*\\S(.|\\s)*",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        },
+        {
+          "name": "OnLeave",
+          "checked": true,
+          "table": true,
+          "type": "bool",
+          "validation": {
+            "name": "None",
+            "regex": "",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        },
+        {
+          "name": "BasicSalary",
+          "checked": true,
+          "table": true,
+          "type": "double",
+          "validation": {
+            "name": "Decimal",
+            "regex": "^[0-9]*(\\.[0-9]{1,4})?$",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        },
+        {
+          "name": "Notes",
+          "checked": true,
+          "table": false,
+          "type": "string",
+          "validation": {
+            "name": "None",
+            "regex": "",
+            "custom": false
+          },
+          "optional": true,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [
+            "[JengaTextArea]"
+          ],
+          "reference": null
+        },
+        {
+          "name": "CreatedAt",
+          "checked": true,
+          "table": false,
+          "type": "DateTime",
+          "validation": {
+            "name": "Read-Only",
+            "regex": "",
+            "custom": false
+          },
+          "optional": true,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        }
+      ],
+      "name": "Employee",
+      "FileName": "D:\\repos\\Payroll_Management_System\\Payroll_Management_System\\Models\\Employee.cs",
+      "namespace": "Payroll_Management_System.Models"
+    },
+    {
+      "checked": true,
+      "type": "\\Pages",
+      "table_view": true,
+      "export_csv": true,
+      "print": true,
+      "search": true,
+      "create_update": "\\Forms",
+      "delete": true,
+      "properties": [
+        {
+          "name": "PayslipID",
+          "checked": false,
+          "table": true,
+          "type": "int",
+          "validation": {
+            "name": "Read-Only",
+            "regex": "",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": true,
+          "auto_increment": true,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        },
+        {
+          "name": "EmployeeID",
+          "checked": true,
+          "table": true,
+          "type": "int",
+          "validation": {
+            "name": "None",
+            "regex": "",
+            "custom": false
+          },
+          "optional": false,
+          "filter": true,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": "Employee",
+          "method": "GetEmployeeName",
+          "attributes": [],
+          "reference": "Employee"
+        },
+        {
+          "name": "Year",
+          "checked": true,
+          "table": true,
+          "type": "int",
+          "validation": {
+            "name": "Year",
+            "regex": "^\\d{4}$",
+            "custom": true
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        },
+        {
+          "name": "Month",
+          "checked": true,
+          "table": true,
+          "type": "string",
+          "validation": {
+            "name": "Not Empty",
+            "regex": "(.|\\s)*\\S(.|\\s)*",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [
+            "[JengaOptions]Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec"
+          ],
+          "reference": null
+        },
+        {
+          "name": "Basic",
+          "checked": true,
+          "table": true,
+          "type": "double",
+          "validation": {
+            "name": "None",
+            "regex": "",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        },
+        {
+          "name": "Allowances",
+          "checked": true,
+          "table": true,
+          "type": "double",
+          "validation": {
+            "name": "None",
+            "regex": "",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        },
+        {
+          "name": "Deductions",
+          "checked": true,
+          "table": true,
+          "type": "double",
+          "validation": {
+            "name": "None",
+            "regex": "",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        },
+        {
+          "name": "Gross",
+          "checked": true,
+          "table": true,
+          "type": "double",
+          "validation": {
+            "name": "None",
+            "regex": "",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        },
+        {
+          "name": "Net",
+          "checked": true,
+          "table": true,
+          "type": "double",
+          "validation": {
+            "name": "None",
+            "regex": "",
+            "custom": false
+          },
+          "optional": false,
+          "filter": false,
+          "primary_key": false,
+          "auto_increment": false,
+          "identifier": false,
+          "label": null,
+          "method": null,
+          "attributes": [],
+          "reference": null
+        }
+      ],
+      "name": "Payslip",
+      "FileName": "D:\\repos\\Payroll_Management_System\\Payroll_Management_System\\Models\\Payslip.cs",
+      "namespace": "Payroll_Management_System.Models"
+    }
+  ],
+  "page_prefix": "Page_",
+  "overwrite": true,
+  "frm_prefix": "Frm_",
+  "namespace": "Payroll_Management_System"
+}
